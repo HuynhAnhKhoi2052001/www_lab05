@@ -11,7 +11,9 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity(name = "company")
-@Data @AllArgsConstructor @NoArgsConstructor
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Company {
     @Id
     private long id;

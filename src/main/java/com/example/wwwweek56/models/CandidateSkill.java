@@ -1,6 +1,7 @@
 package com.example.wwwweek56.models;
 
 import com.example.wwwweek56.enums.SkillLevel;
+import com.example.wwwweek56.ids.CandidateSkillID;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +11,7 @@ import lombok.NoArgsConstructor;
 import java.util.Objects;
 
 @Entity(name = "candidateSkill")
-@IdClass(com.example.wwwweek56.ids.CandidateSkill.class)
+@IdClass(CandidateSkillID.class)
 @Data @AllArgsConstructor @NoArgsConstructor
 public class CandidateSkill {
     @Id

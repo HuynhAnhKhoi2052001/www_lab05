@@ -1,30 +1,36 @@
 package com.example.wwwweek56.models;
 
 import com.example.wwwweek56.enums.SkillLevel;
+import com.example.wwwweek56.ids.JobSkillID;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 import java.util.Objects;
 
-@Entity(name = "jobSkill")
-@IdClass(com.example.wwwweek56.ids.JobSkill.class)
-@Data @NoArgsConstructor @AllArgsConstructor
+@Entity
+@IdClass(JobSkillID.class)
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class JobSkill {
+
     @Id
     @ManyToOne
+    @JoinColumn(name = "job_id")
     private Job job;
 
     @Id
     @ManyToOne
+    @JoinColumn(name = "skill_id")
     private Skill skill;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private SkillLevel skillLevel;
 
     private String moreInfo;
+
     public JobSkill(Job job, Skill skill) {
         this.job = job;
         this.skill = skill;

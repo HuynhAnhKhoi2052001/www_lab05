@@ -9,8 +9,10 @@ import lombok.Setter;
 import java.time.LocalDate;
 
 @Entity(name = "experiences")
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Experiences {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
