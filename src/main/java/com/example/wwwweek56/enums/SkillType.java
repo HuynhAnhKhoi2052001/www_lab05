@@ -1,8 +1,17 @@
 package com.example.wwwweek56.enums;
 
 public enum SkillType {
-    SOFT_SKILL(1), UNSPECIFIC(2), TECHNICAL_SKILL(3);
+    TECHNICAL_SKILL(3),
+    SOFT_SKILL(1),
+    UNSPECIFIC(2);
 
-    SkillType(int i) {
+    private final int typeCode;
+
+    SkillType(int typeCode) {
+        this.typeCode = typeCode;
+    }
+
+    public int getTypeCode() {
+        return typeCode;
     }
 }
